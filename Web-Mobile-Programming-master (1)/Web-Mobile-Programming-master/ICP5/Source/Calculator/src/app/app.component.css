@@ -1,0 +1,13 @@
+.btn-group {
+  display: table;
+}
+.btn {
+  border-radius: 0 !important;
+}
+.top-buffer {
+  margin-top:5px;
+}
+.alert {
+  font-size: 36px;
+  height: 75px;
+}

@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.common.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.default.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.default.mobile.min.css" />
+
+  <script src="https://kendo.cdn.telerik.com/2019.2.619/js/jquery.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.rtl.min.css" />
+  <link rel="stylesheet" href="home.css">
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="home.js"></script>
+</head>
+
+<body>
+
+  <ul id="b">
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="profile.html">My Profile</a></li>
+
+    <li>
+      <a href="#">Courses &#9662;</a>
+      <ul class="dropdown">
+        <li><a href="computerscience.html">Computer Science Engineering</a></li>
+        <li><a href="electricalscience.html">Electrical Science Engineering</a></li>
+
+      </ul>
+    </li>
+    <li><a href="https://www.umkcbookstore.com/">Books</a></li>
+    <li><a href="https://www.umkc.edu/registrar/academic-calendar.html">Calendar</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a onclick="logout()">Log Out</a></li><br>
+    <li style="font-size: 23px;color:rgb(34, 29, 29)">Friends</li>
+    <li  aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/palla.png">Harish Tata</img></li>
+    <li aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/hiresh.png">Yamuna Sree</img></li>
+    <li aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/bindu.png">Surekha Bhimireddy</img></li>
+
+  </ul>
+
+  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+
+    <h2 id="name" style="color:green"></h2><br><br>
+
+    <div class="demo-section k-content wide">
+      <div id="listView"></div>
+      <!-- <div id="pager" class="k-pager-wrap"></div> -->
+    </div>
+    <script type="text/x-kendo-template" id="template">
+      <div class="product">
+        <img src="Images/#= Subject #.png" alt="#: Subject # image" />
+        <h3 id="sub">#:Subject#</h3>
+        <h3>#:Classroom#</h3>
+        <h3>#:InstrutorName#</h3>
+        <h3>#:Day#</h3>  <h3>#:Time#</h3>
+        <!-- <p>#:Subject#</p> -->
+        <div class="edit-buttons">
+          <a class="k-button k-edit-button" href="\\#"><span class="k-icon k-i-edit"></span></a>
+          <a class="k-button k-custom-delete-button" href="\\#" onclick="Delete(this)"><span class="k-icon k-i-delete"></span></a>
+      </div>
+    </div>
+
+    </script>
+    <script type="text/x-kendo-tmpl" id="editTemplate">
+      <div class="product-view k-widget">
+          <dl>
+              <dt>Subject</dt>
+              <dd>
+                  <input disabled="disabled" type="text" class="k-textbox" data-bind="value:Subject" name="Subject" id="Subject" />
+                  <span data-for="Subject" class="k-invalid-msg"></span>
+              </dd>
+              <dt>Classroom</dt>
+              <dd>
+                  <input type="text" data-bind="value:Classroom" name="Classroom" id="Classroom" />
+                  <span data-for="Classroom" class="k-invalid-msg"></span>
+              </dd>
+              <dt>InstrutorName</dt>
+              <dd>
+                  <input type="text" data-bind="value:InstrutorName" name="InstrutorName" id="InstrutorName" />
+                  <span data-for="InstrutorName" class="k-invalid-msg"></span>
+              </dd>
+              <dt>Day</dt>
+              <dd>
+                  <input type="text" data-bind="value:Day" name="Day" id="Day" />
+                  <span data-for="Day" class="k-invalid-msg"></span>
+              </dd>
+              <dt>Time</dt>
+              <dd>
+                  <input type="text" data-bind="value:Time" name="Time" id="Time" />
+                  <span data-for="Time" class="k-invalid-msg"></span>
+              </dd>
+          </dl>
+          <div class="edit-buttons">
+              <a onclick="update(this)" class="k-button k-update-button" href="\\#"><span class="k-icon k-i-check"></span></a>
+              <a class="k-button k-cancel-button" href="\\#"><span class="k-icon k-i-cancel"></span></a>
+          </div>
+      </div>
+  </script>
+
+    <br>
+    <br>
+  </div>
+
+</body>

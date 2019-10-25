@@ -1,0 +1,180 @@
+<html lang="en">
+  
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  type="text/javascript"  src="script.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 25%;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+      font-size: 20px;
+    }
+
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    li a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+
+    ul li ul.dropdown {
+      min-width: 100%;
+      /* Set width of the dropdown */
+      background: #f2f2f2;
+      display: none;
+      position: absolute;
+      z-index: 999;
+      left: 0;
+    }
+
+    ul li:hover ul.dropdown {
+      display: block;
+      /* Display the dropdown */
+    }
+
+    ul li ul.dropdown li {
+      display: block;
+    }
+  </style>
+    <style>
+    #listView {
+      padding: 10px 5px;
+      margin-bottom: -1px;
+      min-height: 510px;
+      /* Avoid cutout if font or line is bigger */
+      font: inherit;
+    }
+
+    .product {
+      float: left;
+      position: relative;
+      width: 111px;
+      height: 170px;
+      margin: 0 5px;
+      padding: 0;
+    }
+
+    .product img {
+      width: 110px;
+      height: 110px;
+    }
+
+    .product h3 {
+      margin: 0;
+      padding: 3px 5px 0 0;
+      max-width: 96px;
+      overflow: hidden;
+      line-height: 1.1em;
+      font-size: .9em;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    .product p {
+      visibility: hidden;
+    }
+
+    .product:hover p {
+      visibility: visible;
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      line-height: 110px;
+      vertical-align: middle;
+      text-align: center;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.75);
+      transition: background .2s linear, color .2s linear;
+      -moz-transition: background .2s linear, color .2s linear;
+      -webkit-transition: background .2s linear, color .2s linear;
+      -o-transition: background .2s linear, color .2s linear;
+    }
+
+    .k-listview:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+</style>
+</head>
+<body>
+
+    <ul id="b">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+    
+        <li>
+          <a href="#">Courses &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="computerscience.html">Computer Science Engineering</a></li>
+            <li><a href="electricalscience.html">Electrical Science Engineering</a></li>
+    
+          </ul>
+        </li>
+        <li><a href="https://www.umkcbookstore.com/">Books</a></li>
+        <li><a href="#contact">Calendar</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a onclick="logout()">Log Out</a></li><br>
+        <li style="font-size: 23px;color:rgb(34, 29, 29)">Friends</li>
+    <li  aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/palla.png">Harish Tata</img></li>
+    <li aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/hiresh.png">Yamuna Sree</img></li>
+    <li aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/bindu.png">Surekha Bhimireddy</img></li>
+      </ul>
+
+              <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><div style="color: green">
+                    <h1><center><u><B style="color:black">About US</u></B></center></h1>
+                    <center><h2>Student Portal is the main tool students use to register for classes, view grades and update contact information, among other functions.Please feel free to contact us registrar@umkc.edu </h2></center>
+                    <center><h2><p>You may never have to set foot in the Office of Registration and Records, but we work behind the scenes to make your experience at UMKC the best it can be. We oversee registration - or enrollment - at the university to ensure students can get the classes they need to complete their degrees. </p>  </h2><center>
+                            <center><h2><p>In addition to registration, we also maintain all student records at the university to make sure your information is secure and accurate.</p></h2></center>
+                            <br>
+                    <br>
+                   <h2><center><a href="https://www.umkc.edu/registrar/about-us/contact-us.html" style="color:black">Contact US</a></center></h2> 
+                </div>
+                </div>
+                <script>
+                  $(document).ready(function () {
+      var mailId1 = localStorage.getItem("email2");
+      if (mailId1 == null) {
+        window.location.href = "index.html";
+      }
+    });
+                  function logout() {
+      localStorage.removeItem("email2");
+      window.location.href = "index.html";
+    }
+                </script>
+
+                    </body>

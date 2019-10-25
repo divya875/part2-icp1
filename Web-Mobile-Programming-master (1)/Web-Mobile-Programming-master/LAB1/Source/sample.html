@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-size: 30px;
+  }
+  output {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-size: 30px;
+  }
+        </style>
+ 
+    </head>
+    <body>
+            <ul class="nav">
+                    <li>Link 1</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                    </ul>
+                    
+                    <ul class="output">
+                    <li>Content and output here 1</li>
+                    <li>Content and output here 2</li>
+                    <li>Content and output here 3</li>
+                    </ul>
+    
+    <script>
+    $(document).ready(function() {
+        $(".nav li").hover(function(){
+
+            $(this).addClass("hover");
+            $('.output li').css('visibility', 'visible');
+
+        }, function(){
+
+            $(this).removeClass("hover");
+            $('.output li').css('visibility', 'hidden');
+
+        });
+    });
+    </script>
+</body>
+
+</html>

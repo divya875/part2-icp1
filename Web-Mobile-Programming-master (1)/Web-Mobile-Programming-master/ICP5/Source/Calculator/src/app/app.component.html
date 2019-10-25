@@ -1,0 +1,59 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div class="container">
+  <div class="row top-buffer">
+    <div class="col-md-4">
+      <div class="alert alert-warning" role="alert">{{result}}</div>
+    </div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-4">
+      <input disabled [(ngModel)]="operation" type="text" class="form-control"/>
+    </div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-1"><button (click)="append('7')" class="btn btn-default btn-block">7</button></div>
+    <div class="col-md-1"><button (click)="append('8')" class="btn btn-default btn-block">8</button></div>
+    <div class="col-md-1"><button (click)="append('9')" class="btn btn-default btn-block">9</button></div>
+    <div class="col-md-1"><button (click)="append('+')" class="btn btn-default btn-block">+</button></div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-1"><button (click)="append('4')" class="btn btn-default btn-block">4</button></div>
+    <div class="col-md-1"><button (click)="append('5')" class="btn btn-default btn-block">5</button></div>
+    <div class="col-md-1"><button (click)="append('6')" class="btn btn-default btn-block">6</button></div>
+    <div class="col-md-1"><button (click)="append('-')" class="btn btn-default btn-block">-</button></div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-1"><button (click)="append('1')" class="btn btn-default btn-block">1</button></div>
+    <div class="col-md-1"><button (click)="append('2')" class="btn btn-default btn-block">2</button></div>
+    <div class="col-md-1"><button (click)="append('3')" class="btn btn-default btn-block">3</button></div>
+    <div class="col-md-1"><button (click)="append('*')" class="btn btn-default btn-block">*</button></div>
+  </div>
+
+  <div class="row top-buffer">
+    <div class="col-md-1"><button (click)="append('0')" class="btn btn-default btn-block">0</button></div>
+    <div class="col-md-1"><button (click)="append('/')" class="btn btn-default btn-block">
+      /
+    </button>
+    </div>
+    <div class="col-md-1">
+      <button (click)="append('(')" class="btn btn-default btn-block">
+        (
+      </button>
+    </div>
+    <div class="col-md-1"><button (click)="append(')')" class="btn btn-default btn-block">)</button></div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-1"><button (click)="undo()" class="btn btn-default btn-block">undo
+      <i class="fa fa-reply" aria-hidden="true"></i>
+    </button>
+    </div>
+    <div class="col-md-1">
+      <button (click)="clear()" class="btn btn-default btn-block">clear
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="col-md-2"><button (click)="evaluate()" class="btn btn-default btn-block">=</button></div>
+  </div>
+</div>

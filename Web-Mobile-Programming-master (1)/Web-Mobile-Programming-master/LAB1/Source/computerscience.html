@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script  type="text/javascript"  src="script.js"></script> -->
+    <script  type="text/html"  src="index.html"></script>
+    <script type="text/javascript"  src="script.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .noshow
+    {
+        display:none;
+    }   
+    body {
+    margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-size: 20px;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  li a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+</style>
+
+</head>
+<body >
+        <ul id="b">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">My Profile</a></li>
+               
+                <li>
+                        <a class="active" href="#">Courses &#9662;</a>
+                        <ul class="dropdown">
+                            <li><a href="computerscience.html">Computer Science Engineering</a></li>
+                            <li><a href="electricalscience.html">Electrical Science Engineering</a></li>
+                            
+                        </ul>
+                    </li>
+                <li><a href="https://www.umkcbookstore.com/">Books</a></li>
+                <li><a href="https://www.umkc.edu/registrar/academic-calendar.html">Calendar</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a onclick="logout()">Log Out</a></li><br>
+                <li style="font-size: 23px;color:rgb(34, 29, 29)">Friends</li>
+    <li  aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/palla.png">Harish Tata</img></li>
+    <li aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/hiresh.png">Yamuna Sree</img></li>
+    <li aria-hidden="true" style="font-size: 18px;color:rgb(78, 67, 67);margin-top: 15px"><img style="height: 25px;width: 25px"   src="Images/bindu.png">Surekha Bhimireddy</img></li>
+              </ul>
+
+              <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+                <br>
+                <br>
+               
+              
+<h2 >Computer Science
+</h2><br>
+<div id="select" align="center">
+    <label style="font-size: x-large;font-weight: bold">Course Career: </label>
+    <select  id="s" style="font-size: large ;width:20% ;align: center">
+        <option value="G" selected>Graduate</option>
+        <option value="U">UnderGraduate</option>
+
+</select>
+</div>
+<br><br>
+<div class="table-responsive" id="G">
+<table class="table" border="1" cellspacing="0" cellpadding="10" style="text-align: center" align="center">
+    <tr style="background-color: lightgrey;color: steelblue">
+        
+        <th>Class</th>
+        <th>Room</th>
+        <th>Instructor</th>
+        <th>Days</th>
+        <th>Time</th>
+        <th>Seats Remaining</th>
+        <th>Credits</th>
+        <th class="disp"></th>
+        
+    </tr>
+    <tr>
+       
+        <td>Network Architecture</td>
+        <td>    
+            Katz Hall-Rm 00207
+        </td>
+        <td>
+            Baek-Young Choi
+        </td>
+        <td>
+            TuTh
+        </td>
+        <td>
+            11:30AM-12:45PM
+        </td>
+        <td>4</td>
+        <td>3</td>
+        <td class="disp"><input type="button" value="Enroll" onclick="enroll('Network Architecture','Katz Hall-Rm 00207','Baek-Young Choi','TuTh','11:30AM-12:45PM')"></td>
+    </tr>
+    <tr>
+        
+        <td>Principles of Big Data Management</td>
+        <td>
+            Cockefair Hall-Rm 00104
+        </td>
+        <td>
+            Praveen Rao
+        </td>
+        <td>
+            MoWe
+        </td>
+        <td>
+            4:00PM-5:15PM
+        </td>
+        <td>15</td>
+        <td>3</td>
+        <td class="disp"><input type="button" value="Enroll" onclick="enroll('Principles of Big Data Management','Cockefair Hall-Rm 00104','Praveen Rao','MoWe','4:00PM-5:15PM')"></td>
+    </tr>
+    <tr>
+        
+        <td>Parallel Algorithms</td>
+        <td>
+            Haag Hall-Rm 00201
+        </td>
+        <td>
+            Yijie Han
+        </td>
+        <td>
+            MoWeFr
+        </td>
+        <td>
+            1:00PM-1:50PM
+        </td>
+        <td>2</td>
+        <td>3</td>
+        <td class="disp"><input type="button" value="Enroll" onclick="enroll('Parallel Algorithms','Haag Hall-Rm 00201','Yijie Han','MoWeFr','1:00PM-1:50PM')"></td>
+    </tr>
+    <tr>
+        
+        <td>Cloud Computing</td>
+        <td>
+            Katz Hall-Rm 00008
+        </td>
+        <td>
+            Baek-Young Choi
+        </td>
+        <td>
+            TuTh
+        </td>
+        <td>
+            1:00PM-2:15PM
+        </td>
+        <td>26</td>
+        <td>3</td>
+            
+            <td class="disp"><input type="button" value="Enroll" onclick="enroll('Cloud Computing','Katz Hall-Rm 00008','Baek-Young Choi','TuTh','1:00PM-2:15PM')"></td>
+    </tr>
+    <tr>
+       
+        <td>Formal Software Specification</td>
+        <td>
+            Royal Hall-Rm 00206
+        </td>
+        <td>
+            Baek-Young Choi
+        </td>
+        <td>
+            MoWeFr
+        </td>
+        <td>
+            3:00PM-3:50PM
+        </td>
+        <td>8</td>
+        <td>3</td>
+        <td class="disp"><input type="button" value="Enroll" onclick="enroll('Formal Software Specification','Royal Hall-Rm 00206','Baek-Young Choi','MoWeFr','3:00PM-3:50PM')"></td>
+    </tr>
+</table>
+</div>
+<div class="noshow table-responsive" id="U" >
+<!---------------------------------------------------------------------------->
+    <table class="table" border="1" cellspacing="0" cellpadding="10" style="text-align: center" align="center">
+        <tr style="background-color: lightgrey;color: steelblue">
+            
+            <th>Class</th>
+            <th>Room</th>
+            <th>Instructor</th>
+            <th>Days</th>
+            <th>Time</th>
+            <th>Seats Remaining</th>
+            <th>Credits</th>
+            <th class="disp"></th>
+        </tr>
+        <tr>
+            
+            <td>Design Algorithms</td>
+            <td>
+                Cockefair Hall-Rm 00207
+            </td>
+            <td>
+             Yijie 
+            </td>
+            <td>
+                TuFr
+            </td>
+            <td>
+                10:30AM-11:45PM
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td class="disp"><input type="button" value="Enroll" onclick="enroll($('#loginemail')[0].value,'Design Algorithms')"></td>
+        </tr>
+        <tr>
+           
+            <td>Computer Networks</td>
+            <td>
+                Catz Hall-Rm 00102
+            </td>
+            <td>
+                Yijie Haan
+            </td>
+            <td>
+                SDGAA
+            </td>
+            <td>
+                3:00PM-4:15PM
+            </td>
+            <td>15</td>
+            <td>3</td>
+            <td class="disp"><input type="button" value="Enroll" onclick="enroll($('#loginemail')[0].value,'Computer Networks')"></td>
+        </tr>
+        <tr>
+            
+            <td>Python</td>
+            <td>
+                Haagg Hall-Rm 00204
+            </td>
+            <td>
+              Lee
+            </td>
+            <td>
+                COZSZ
+            </td>
+            <td>
+                4:00PM-4:50PM
+            </td>
+            <td>2</td>
+            <td>3</td>
+            <td class="disp"><input type="button" value="Enroll" onclick="enroll($('#loginemail')[0].value,'Python')"></td>
+        </tr>
+        <tr>
+           
+            <td>OOPS</td>
+            <td>
+                Katz Hall-Rm 00008
+            </td>
+            <td>
+                Baek-Young Choi
+            </td>
+            <td>
+                TuTh
+            </td>
+            <td>
+                1:00PM-2:15PM
+            </td>
+            <td>26</td>
+            <td>3</td>
+            <td class="disp"><input type="button" value="Enroll" onclick="enroll($('#loginemail')[0].value,'OOPS')"></td>
+        </tr>
+        <tr>
+           
+            <td>C++</td>
+            <td>
+                Royal Hall-Rm 00206
+            </td>
+            <td>
+                Baek-Young Choi
+            </td>
+            <td>
+                MoWeFr
+            </td>
+            <td>
+                3:00PM-3:50PM
+            </td>
+            <td>8</td>
+            <td>3</td>
+            <td class="disp"><input type="button" value="Enroll" onclick="enroll($('#loginemail')[0].value,'C++')"></td>
+        </tr>
+    </table>
+  
+</div>
+</div>
+<script>
+        $(document).ready(function () {
+      var mailId1 = localStorage.getItem("email2");
+      if (mailId1 == null) {
+        window.location.href = "index.html";
+      }
+    });
+    function logout() {
+      localStorage.removeItem("email2");
+      window.location.href = "index.html";
+    }
+    function enroll(subj_name,classroom,instname,day,time){
+        
+        $.getJSON('https://api.mlab.com/api/1/databases/tut9/collections/weblab?apiKey=SmaCXoSLpeMEZe-UpnPrgjpC0Wg_H2rZ', {
+}).done(function(data) {
+    var a=[];
+    var var1 = false;
+    var mailId1=localStorage.getItem("email2");
+    //console.log(data[1].Courses.length);
+    //var mailId=amplify.store("key1");
+    //var mailId1=globalVariable.mail;
+    //console.log(mailId1);
+    console.log(data);
+    //console.log(subj_name)
+   
+    var j=0;
+    
+   
+    for(j=0;j<data.length;j++){
+        //console.log(mailId1);
+        if(mailId1==data[j].Email)
+        {
+            var m=j;
+        }
+    }
+    for(k=0;k<data[m].Courses.length;k++){
+        if(subj_name==data[m].Courses[k].Subject){
+            var1=true;
+            alert("You have already enrolled for this course!!!");
+        }
+    }
+    data[m].Courses.push({"Subject":subj_name,"Classroom":classroom,"InstrutorName":instname,"Day":day,"Time":time});
+    
+    if(var1==false){
+        
+        $.ajax( { url:' https://api.mlab.com/api/1/databases/tut9/collections/weblab/' + data[m]._id.$oid + '?apiKey=SmaCXoSLpeMEZe-UpnPrgjpC0Wg_H2rZ',
+		  data: JSON.stringify( { "$set" : { "Courses" : data[m].Courses } } ),
+		  type: "PUT",
+		  contentType: "application/json" } );  
+    }
+     alert("Enrolled Successfully!!"); 
+
+});          
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+<title>Show & Hide Form - Demo Preview</title>
+<meta content="noindex, nofollow" name="robots">
+<!-- <link href="css/showhide.css" rel="stylesheet"> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- <script src="js/showhide.js"></script> -->
+<script  type="text/javascript"  src="script.js"></script>
+<script  type="text/html"  src="index.html"></script>
+<script  type="text/html"  src="home.html"></script>
+<script  type="text/html"  src="computerscience.html"></script>
+<script  type="text/html"  src="electricalscience.html"></script>
+<script  type="text/html"  src="courses.html"></script>
+<style>
+    body{
+
+    background-color:#eeeff3;
+text-align:center
+}
+#main{
+position:relative;
+margin-top:15px
+}
+img#logo{
+margin-top:50px
+}
+#first{
+width:308px;
+margin-top:0;
+padding:28px 25px;
+background-color:#fff;
+border:1px solid #000;
+border-radius:5;
+position:absolute;
+left:50%;
+margin-left:-180px;
+top:0
+}
+#second{
+width:308px;
+margin-top:0;
+padding:28px 25px;
+background-color:#fff;
+display:none;
+border:1px solid #000;
+border-radius:5;
+position:absolute;
+left:50%;
+margin-left:-180px;
+top:0
+}
+h3{
+margin-top:0
+}
+input[type=text],[type=password]{
+padding:7px;
+width:100%;
+height:40px;
+margin-top:15px;
+font-size:18px
+}
+input[type=button]{
+background:linear-gradient(to bottom,#22abe9 5%,#36caf0 100%);
+box-shadow:inset 0 1px 0 0 #7bdcf4;
+border:1px solid #0F799E;
+color:#fff;
+width:306px;
+height:40px;
+margin-top:15px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+text-shadow:0 1px 0 #13506D
+}
+input[type=button]:hover{
+background:linear-gradient(to bottom,#36caf0 5%,#22abe9 100%)
+}
+a{
+text-decoration:none;
+color:#6495ed
+}
+p#two{
+margin-bottom:0
+}
+</style>
+</head>
+<body>
+    <br>
+    <br>
+<center><h2>Online Student Portal</h2></center>
+<!-- <img id="logo" src="C:\Users\xe368404.AD\OneDrive - Sprint\Desktop\studentportal.png"> -->
+<div id="main">
+<!-- Create Div First For Login Form -->
+<div id="first">
+<form action="" method="post">
+<h3>Login to your Student account.</h3>
+<!-- <img id="divider" src="images/divider.png"> -->
+<input id="loginemail" placeholder="Email" type="text">
+<input id="loginpassword" placeholder="Password" type="password">
+<input id="login" type="button" value="Sign In">
+<p id="one"><a href="#">Forgot Password ?</a></p>
+<p id="two">Don't have account? <a class="signup" href="#" id="signup">Sign up here</a></p>
+</form>
+</div>
+<!-- Create Div Second For Signup Form-->
+<div id="second">
+<form action="" id="form" method="post" name="form">
+<h3>Create a Free Account</h3>
+<!-- <img id="divider" src="images/divider.png"> -->
+<input id="fname" placeholder="First Name" type="text">
+<input id="lname" placeholder="Last Name" type="text">
+<input id="email" placeholder="Email" type="text">
+<input id="uname" placeholder="User Name" type="text">
+<input id="password" placeholder="Password" type="password">
+<input id="contact" placeholder="Contact Number" type="text">
+<input id="register" type="button" value="Create your Student Account">
+<p id="two">Already have an account? <a class="signin" href="#" id="signin">Sign in</a></p>
+</form>
+</div>
+</div>
+</body>
+</html>
